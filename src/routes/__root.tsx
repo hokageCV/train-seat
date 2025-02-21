@@ -17,7 +17,7 @@ function RootComponent() {
           }}
           activeOptions={{ exact: true }}
         >
-          Homeee
+          Home
         </Link>{' '}
         <Link
           to="/about"
@@ -25,7 +25,7 @@ function RootComponent() {
             className: 'font-bold',
           }}
         >
-          Aboutzz
+          About
         </Link>
       </div>
       <hr />
