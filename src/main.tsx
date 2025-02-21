@@ -7,6 +7,7 @@ import { routeTree } from './routeTree.gen'
 const router = createRouter({
   routeTree,
   defaultPreload: 'intent',
+  basepath: '/train-seat',
 })
 
 // Register things for typesafety

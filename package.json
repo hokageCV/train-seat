@@ -1,5 +1,6 @@
 {
   "name": "train-seat",
+  "homepage": "http://hokageCV.github.io/train-seat",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -7,14 +8,17 @@
     "typecheck": "tsc --noEmit",
     "dev": "vite --port=3001",
     "build": "vite build",
+    "predeploy": "pnpm build",
+    "deploy": "gh-pages -d dist",
     "serve": "vite preview",
     "start": "vite"
   },
   "devDependencies": {
+    "@tanstack/router-plugin": "^1.106.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
-    "@tanstack/router-plugin": "^1.106.0",
     "@vitejs/plugin-react": "^4.3.2",
+    "gh-pages": "^6.3.0",
     "vite": "^6.0.3"
   },
   "dependencies": {
