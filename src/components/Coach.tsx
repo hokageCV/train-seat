@@ -1,5 +1,5 @@
 import { BERTHS_IN_A_COUPE } from '../constants'
-import Coupe from './coupe'
+import Coupe from './Coupe'
 
 type CoachProps = {
   berths: number
@@ -11,7 +11,6 @@ export default function Coach({ berths }: CoachProps) {
 
   return (
     <>
-      <h3>coach</h3>
       {coupes.map((_, index) => (
         <Coupe index={index} />
       ))}

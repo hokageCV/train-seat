@@ -13,12 +13,14 @@ export default function Coupe({ index }: CoupeProps) {
   for (let i = startBerth; i <= endBerth; i += 1) berths.push(i)
 
   return (
-    <>
-      <p key={`coupe_${index}`}>Coupe {coupeNumber}</p>
+    <div className='py-2 w-3/4'>
+      <p key={`coupe_${index}`} className='text-xs text-bg-text'>Coupe {coupeNumber}</p>
 
-      {berths.map((berth) => (
-        <span>{berth} &nbsp;</span>
-      ))}
-    </>
+      <div className='grid grid-cols-4'>
+        {berths.map((berth) => (
+          <span>{berth} &nbsp;</span>
+        ))}
+      </div>
+    </div>
   )
 }
