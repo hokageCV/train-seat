@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #81a1c1;
+  --color-background: #a8bed4;
   --color-base-text: #2e3440;
   --color-bg-text: #5e81ac;
   --color-accent: #88c0d0;
-  --color-berth: #678db4;
-  --color-selected-berth: #4a7096;
+  --color-selected-berth-bg: #678bd4;
+  --color-selected-berth-text: #eceff4;
+  --color-selected-berth-border: #4a7096;
+  --color-unselected-berth-bg: #9bb5ce;
+  --color-unselected-berth-text: #4a7096;
 }
