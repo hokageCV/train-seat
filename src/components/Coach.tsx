@@ -1,5 +1,5 @@
 import html2canvas from 'html2canvas'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { BERTHS_IN_A_COUPE } from '../constants'
 import Coupe from './Coupe'
 
@@ -9,7 +9,7 @@ type CoachProps = {
 
 export default function Coach({ berths }: CoachProps) {
   let coachRef = useRef<HTMLDivElement>(null)
-  let coachName = '007'
+  let [coachName, setCoachName] = useState('')
 
   let coupeCount = Math.floor(berths / BERTHS_IN_A_COUPE)
   let coupes = Array.from({ length: coupeCount }, (_, index) => index)
@@ -30,13 +30,17 @@ export default function Coach({ berths }: CoachProps) {
 
     let link = document.createElement('a')
     link.href = image
-    link.download = `${coachName}.png`
+    link.download = `${coachName || 'train_seat'}.png`
     link.click()
   }
 
   return (
     <>
       <div ref={coachRef} className='bg-background'>
+        <div className='mb-2'>
+          <label>Coach: </label>
+          <input value={coachName} onChange={(e) => setCoachName(e.target.value.toUpperCase())} className='border-b-3 p-1 max-w-[50px] ' />
+        </div>
         {coupes.map((_, index) => (
           <Coupe index={index} />
         ))}
