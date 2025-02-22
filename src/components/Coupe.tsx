@@ -32,7 +32,7 @@ export default function Coupe({ index }: CoupeProps) {
     <div className='py-2 w-3/4'>
       <div className='grid grid-cols-5 gap-1'>
         {berths.map((berth, idx) => {
-          if (berth == null) return <span className='select-none'>&nbsp;</span>
+          if (berth == null) return <span className='select-none max-w-[95px]'>&nbsp;</span>
 
           return <Berth key={`berth_${berth}`} berth={berth} index={idx} />
         })}
