@@ -1,4 +1,3 @@
-import html2canvas from 'html2canvas'
 import { useRef, useState } from 'react'
 import { BERTHS_IN_A_COUPE } from '../constants'
 import Coupe from './Coupe'
@@ -23,7 +22,9 @@ export default function Coach({ berths }: CoachProps) {
 
     await new Promise((r) => setTimeout(r, 1))
 
-    let canvas = await html2canvas(coachRef.current)
+    const html2canvas = (await import('html2canvas')).default
+    const canvas = await html2canvas(coachRef.current)
+
     let image = canvas.toDataURL('image/png')
 
     coachRef.current.style.cssText = originalStyles
