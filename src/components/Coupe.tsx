@@ -19,13 +19,13 @@ export default function Coupe({ index }: CoupeProps) {
     berths[1],
     berths[2],
     null,
-    berths[7],
+    berths[6],
     // second row
     berths[3],
     berths[4],
     berths[5],
     null,
-    berths[6],
+    berths[7],
   ]
 
   return (
